@@ -1,88 +1,108 @@
-# Abnormal-Security
+# 🔒 Secure File Sharing
 
-<h2>Frontend Structure</h2>
+![Secure File Sharing](https://img.shields.io/badge/Security-High-brightgreen)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Django](https://img.shields.io/badge/Backend-Django-green)
+![License](https://img.shields.io/badge/License-MIT-orange)  
 
-<h3>1. Components</h3>
+A secure file-sharing application using **React, Redux, Django, and Google Authenticator** for 2FA authentication. This project ensures that file transfers are safe, authenticated, and easy to use.  
 
-<h4>Login.js:</h4>Handles user login with email and password validation.
+## 🚀 Features  
 
-<h4>Register.js:</h4> Manages user registration with password validation, role selection, and redirects to MFA setup.
+✅ **User Authentication** – Secure login/registration using OTP-based **Google Authenticator**.  
+✅ **Two-Factor Authentication (2FA)** – Extra layer of security with **QR-based OTP**.  
+✅ **File Upload & Download** – Securely share files via a backend-powered system.  
+✅ **Validation Mechanisms** – Email, password, and username validation for user security.  
+✅ **Anti-Back Navigation** – Prevents users from navigating back to unauthorized pages.  
+✅ **SSL/TLS Security** – Ensures the back-end server only accepts HTTPS traffic with valid certificates.  
+✅ **Clean UI** – Responsive and user-friendly interface with error handling.  
 
-<h4>AuthLogin.js:</h4> Validates OTP for login after MFA.
+---
 
-<h4>AuthRegister.js:</h4> Fetches and displays a QR code for MFA setup and validates OTP for registration completion.
+## 🛠️ Tech Stack  
 
-<h4>RoleBased.js:</h4> Displays role-based content (e.g., manager or guest features) after login.
+**Frontend:**  
+⚡ React.js, Redux  
+🎨 CSS, Bootstrap  
 
-<h4>FileUpload.js:</h4> Allows encrypted file uploads using AES-256 encryption.
+**Backend:**  
+🛡️ Django REST Framework (DRF)  
+🟢 SQLite  
+🔑 Google Authenticator (OTP-based authentication)  
 
-<h3>2. Utilities</h3>
+---
 
-<h4>utils.js:</h4> Contains helper functions for validating email and password formats.
+## 📺 Demo Video
+[![Watch the Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-<h4>api.js:</h4> Configures Axios for backend API calls.
+---
 
-<h3>3. Redux Store</h3> Centralized state management for user authentication, roles, and file upload status.
+## 🚀 Installation & Setup  
 
-<h3>4. Router (App.js)</h3>
+### 🔹 **Clone the Repository**  
+```bash
+git clone https://github.com/smalinidevi/Secure-File-Sharing.git
+cd Secure-File-Sharing
+```
 
-<h4>Configures routes for various components:</h4>  
+### 🔹 **Backend Setup (Django)**  
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
 
-<h4>/: Registration</h4>
+### 🔹 **Frontend Setup (React)**  
+```bash
+cd frontend
+npm install
+npm start
+```
 
-<h4>/login: Login</h4>
+---
 
-<h4>/auth-login: MFA Login</h4>
+## 📌 API Endpoints  
 
-<h4>/auth-register: MFA Registration</h4>
+| Method | Endpoint                      | Description             |
+|--------|--------------------------------|-------------------------|
+| POST   | `/register/`                   | Register a new user     |
+| POST   | `/login/`                      | Login user             |
+| GET    | `/get-qr/:email/`              | Fetch QR Code          |
+| POST   | `/validate-otp/:email/`        | Validate OTP           |
+| POST   | `/upload-file/`                | Upload file            |
+| GET    | `/download-file/:file_id/`     | Download file          |
 
-<h4>/rolebased: Role-based actions</h4>
+---
 
-<h4>/fileupload: File upload feature</h4>
+## 🎯 Future Enhancements  
 
-<h2>Backend Structure</h2>  
-<h3>1. Models</h3>
-<h4>User:</h4> Stores user details (email, name, password, role, MFA secret).
-<h4>EncryptedFile:</h4> Stores metadata for uploaded files.
-<h3>2. Serializers</h3>
-<h4>RegisterSerializer:</h4> Validates and processes registration data.
-<h4>LoginSerializer:</h4> Validates login credentials.
-<h3>3. Views</h3>
-<h4>RegisterView:</h4> Handles user registration and generates QR codes for MFA.
-<h4>GetQRView:</h4> Returns the QR code for a user's MFA setup.
-<h4>ValidateOTPView:</h4> Validates OTP for login and registration.
-<h4>LoginView:</h4> Authenticates users and issues JWT tokens.
-<h4>GetRoleView:</h4> Returns the user's role based on their email.
-<h4>UploadFileView:</h4> Handles AES-encrypted file uploads.
-<h4>GetFilesView:</h4> Retrieves uploaded file metadata.
+✅ **End-to-End Encryption** – AES-based encryption for file security.  
+✅ **Role-Based Access** – Define user roles for better control.  
+✅ **Drag & Drop File Upload** – Improve user experience.  
+✅ **Multi-Factor Authentication (MFA)** – Further enhance security.  
 
-<h3>4. Utility Functions</h3>  
-<h4>generate_qr_code:</h4> Creates a QR code for MFA.
-<h4>encrypt_file:</h4> Implements AES-256 encryption for file uploads.
-<h3>5. URL Configuration</h3>
-<h4>Routes for the above views, including JWT token management:</h4>  
+---
 
-<h4>/register/</h4>  
-<h4>/login/</h4>
-<h4>/get-qr/<email>/</h4>
-<h4>/validate-otp/<email>/</h4>
-<h4>/role/<email>/</h4>
-<h4>/upload-file/</h4>
+## 🤝 Contributing  
 
-  
-<h2>Security Features</h2>
-<h3>MFA (TOTP):</h3>
-<h4>QR code generation using pyotp and qrcode.</h4>
-<h4>OTP validation for login and registration.</h4>
+1. **Fork the repository**  
+2. **Create a new branch**: `git checkout -b feature-branch`  
+3. **Commit your changes**: `git commit -m "Add new feature"`  
+4. **Push to the branch**: `git push origin feature-branch`  
+5. **Create a Pull Request**  
 
-<h3>AES-256 Encryption:</h3>
+---
 
-<h4>Ensures file confidentiality during uploads.</h4>
+## 📄 License  
 
-<h3>JWT Authentication:</h3>
+This project is licensed under the **MIT License**.  
 
-<h4>Secures API endpoints with access and refresh tokens.</h4>
+📧 **Contact:** [LinkedIn](https://www.linkedin.com/in/malinidevi-s-/)  
 
-<h3>Validation:</h3>
+---
 
-<h4>Input validation for emails, passwords, and OTPs.</h4>
+**🔒 Secure File Sharing – Because Security Matters!** 🚀
+
