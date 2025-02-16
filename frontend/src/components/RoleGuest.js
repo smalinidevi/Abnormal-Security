@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/RoleUser.css'; // Import the CSS file
 import Navbar from '../components/Navbar';
 
-const RoleUser = () => {
+const RoleGuest = () => {
   const navigate = useNavigate();
 
   // Prevent Back & Forward Navigation
@@ -19,17 +19,6 @@ const RoleUser = () => {
     };
   }, [navigate]);
 
-  const handleDownloadFile = () => {
-    navigate('/filedownload'); // Navigate to download file page
-  };
-
-  const handleUploadFile = () => {
-    navigate('/fileupload'); // Navigate to upload file page
-  };
-
-  const handleShareFile = () => {
-    navigate('/fileshare'); // Navigate to share file page
-  };
 
   const handleShowFile = () => {
     navigate('/SharedFile'); // Navigate to shared file page
@@ -38,12 +27,9 @@ const RoleUser = () => {
   return (
     <div><Navbar />
       <h1>User Options</h1>
-      <button onClick={handleUploadFile}>Upload File</button>
-      <button onClick={handleDownloadFile}>Download File</button>
-      <button onClick={handleShareFile}>Share File</button>
       <button onClick={handleShowFile}>Shared File</button>
     </div>
   );
 };
 
-export default RoleUser;
+export default RoleGuest;

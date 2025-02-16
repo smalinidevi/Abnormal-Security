@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { setEmail, setAuthentication, setToken } from '../redux/authSlice';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/api';
 import '../styles/Login.css';
-
+import Navbar from '../components/Navbars';
 const Login = () => {
+  useEffect(() => {
+    const hasRefreshed = sessionStorage.getItem("hasRefreshed");
+
+    if (!hasRefreshed) {
+      sessionStorage.setItem("hasRefreshed", "true");
+      window.location.reload();
+    }
+  }, []);
   const [email, setEmailInput] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
@@ -36,7 +45,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div><Navbar />
       <div className="login-container">
         <div className="login-box">
           <h1>Login</h1>

@@ -13,6 +13,7 @@ import FileShare from './components/FileShare';
 import SharedFile from './components/SharedFile';
 import FileViewer from './components/FileViewer';
 import Home from './components/Home';
+import RoleGuest from './components/RoleGuest';
 const App = () => {
   
   return (
@@ -20,11 +21,13 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/auth-register" element={<AuthRegister />} />
           <Route path="/login" element={<Login />} />
           <Route path="/auth-login" element={<AuthLogin />} />
           <Route path="/roleuser" element={<RoleUser/>} />
+          <Route path="/roleguest" element={<RoleGuest/>} />
           <Route path="/fileupload" element={<FileUpload/>} />
           <Route path="/filedownload" element={<FileDownload/>} />
           <Route path="/fileshare" element={<FileShare/>} />

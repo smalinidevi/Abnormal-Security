@@ -6,7 +6,7 @@ import DOMPurify from "dompurify";
 import { validateEmail, validatePassword } from "../utils";
 import api from "../api/api";
 import "../styles/Register.css";
-
+import Navbar from '../components/Navbars';
 const Register = () => {
   const [email, setEmailInput] = useState("");
   const [password, setPassword] = useState("");
@@ -66,7 +66,7 @@ const Register = () => {
     }
   };
 
-  return (
+  return (<div><Navbar />
     <div className="register-container">
       <div className="register-box">
         <h1>Register</h1>
@@ -105,7 +105,7 @@ const Register = () => {
           <button onClick={() => navigate("/login")}>Login</button>
         </p>
       </div>
-    </div>
+    </div></div>
   );
 };
 

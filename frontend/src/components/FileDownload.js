@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFileList, downloadFileAction, setMessage, setError } from '../redux/fileSlice';
+import Navbar from '../components/Navbar';
 
 const FileDownload = () => {
   const [selectedFile, setSelectedFile] = useState('');
@@ -27,7 +28,7 @@ const FileDownload = () => {
   };
 
   return (
-    <div>
+    <div><Navbar />
       <h1>Download Decrypted File</h1>
       <p>Logged in as: <strong>{email}</strong></p>
 

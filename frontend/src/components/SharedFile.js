@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchSharedFileDataAction, downloadFileAction } from "../redux/fileSlice";
+import Navbar from '../components/Navbar';
 
 const SharedFile = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ const SharedFile = () => {
   };
 
   return (
+    <div><Navbar />
     <div className="shared-file-container">
       <h1>Shared Files</h1>
       {status === "loading" && <p>Loading files...</p>}
@@ -91,7 +93,7 @@ const SharedFile = () => {
       ) : (
         status === "succeeded" && <p>No shared files available.</p>
       )}
-    </div>
+    </div></div>
   );
 };
 

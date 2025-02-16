@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api/api";
+import Navbar from '../components/Navbar';
 
 function FileViewer() {
   const { fileName } = useParams(); // Get filename from URL
@@ -31,7 +32,7 @@ function FileViewer() {
   }, [fileName]); // Run effect when fileName changes
 
   return (
-    <div>
+    <div><Navbar />
       <h1>Viewing File: {fileName}</h1>
 
       {fileURL && (

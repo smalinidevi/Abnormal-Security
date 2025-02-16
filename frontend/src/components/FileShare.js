@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers, fetchFileList, setSelectedUser, setSelectedFile, setSelectedPermission,setMessage, setError } from '../redux/fileSlice';
 import api from "../api/api";
+import Navbar from '../components/Navbar';
+
 export default function FileShare() {
   const dispatch = useDispatch();
   
@@ -51,7 +53,7 @@ export default function FileShare() {
 
 
   return (
-    <div>
+    <div><Navbar />
       <h2>File Sharing Panel</h2>
 
       {/* User Selection */}

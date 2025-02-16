@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { uploadFileAction } from "../redux/fileSlice";
+import Navbar from '../components/Navbar';
 
 const FileUpload = () => {
   const [file, setFile] = useState(null);
@@ -42,7 +43,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div>
+    <div><Navbar />
       <h1>Secure PDF Upload with AES-256 Encryption</h1>
       <p>Uploading as: <strong>{email}</strong></p>
       <input type="file" accept=".pdf" onChange={handleFileChange} />
