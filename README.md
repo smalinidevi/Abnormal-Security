@@ -5,6 +5,13 @@
 ![Django](https://img.shields.io/badge/Backend-Django-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)  
 
+# 🔒 Secure File Sharing
+
+![Secure File Sharing](https://img.shields.io/badge/Security-High-brightgreen)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Django](https://img.shields.io/badge/Backend-Django-green)
+![License](https://img.shields.io/badge/License-MIT-orange)  
+
 A secure file-sharing application using **React, Redux, Django, and Google Authenticator** for 2FA authentication. This project ensures that file transfers are safe, authenticated, and easy to use.  
 
 ## 🚀 Features  
@@ -27,7 +34,7 @@ A secure file-sharing application using **React, Redux, Django, and Google Authe
 
 **Backend:**  
 🛡️ Django REST Framework (DRF)  
-🟢 SQLite  
+🟢 PostgreSQL / SQLite  
 🔑 Google Authenticator (OTP-based authentication)  
 
 ---
@@ -45,21 +52,9 @@ git clone https://github.com/smalinidevi/Secure-File-Sharing.git
 cd Secure-File-Sharing
 ```
 
-### 🔹 **Backend Setup (Django)**  
+### 🔹 **Set Up the Application**  
 ```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
-
-### 🔹 **Frontend Setup (React)**  
-```bash
-cd frontend
-npm install
-npm start
+docker-compose up --build
 ```
 
 ---
@@ -79,10 +74,14 @@ npm start
 
 ## 🎯 Future Enhancements  
 
-✅ **End-to-End Encryption** – AES-based encryption for file security.  
-✅ **Role-Based Access** – Define user roles for better control.  
-✅ **Drag & Drop File Upload** – Improve user experience.  
-✅ **Multi-Factor Authentication (MFA)** – Further enhance security.  
+✅ **End-to-End Encryption** – Implement AES-based encryption for both file storage and transfers.  
+✅ **Role-Based Access Control (RBAC)** – Introduce granular permissions for different user roles.  
+✅ **Drag & Drop File Upload** – Enhance user experience with an intuitive drag-and-drop feature.  
+✅ **Multi-Factor Authentication (MFA)** – Extend authentication security with multiple verification methods.  
+✅ **File Activity Logs** – Implement detailed audit logging to track file access and modifications.  
+✅ **Advanced Sharing Controls** – Introduce password-protected file links and expiration settings.  
+✅ **Cloud Storage Integration** – Provide seamless integration with cloud storage platforms like AWS S3 or Google Drive.  
+✅ **Mobile App Support** – Develop a mobile-friendly version for secure file access on the go.  
 
 ---
 
