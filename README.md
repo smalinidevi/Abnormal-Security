@@ -5,12 +5,6 @@
 ![Django](https://img.shields.io/badge/Backend-Django-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)  
 
-# 🔒 Secure File Sharing
-
-![Secure File Sharing](https://img.shields.io/badge/Security-High-brightgreen)
-![React](https://img.shields.io/badge/Frontend-React-blue)
-![Django](https://img.shields.io/badge/Backend-Django-green)
-![License](https://img.shields.io/badge/License-MIT-orange)  
 
 A secure file-sharing application using **React, Redux, Django, and Google Authenticator** for 2FA authentication. This project ensures that file transfers are safe, authenticated, and easy to use.  
 
