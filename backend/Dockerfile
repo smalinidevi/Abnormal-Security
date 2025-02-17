@@ -1,6 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.10-bullseye
-
+FROM python:3.10-bullseye AS django-build
 # Set the working directory
 WORKDIR /app  # ✅ Set correct working directory
 
