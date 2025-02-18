@@ -34,7 +34,7 @@ A secure file-sharing application using **React, Redux, Django, and Google Authe
 ---
 
 ## 📺 Demo Video
-[![Watch the Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Watch the Video](https://drive.google.com/file/d/1zNBF6tqLhiqLdN3bvnV9ZbX4ETUCYLA7/view?usp=sharing)
 
 ---
 
