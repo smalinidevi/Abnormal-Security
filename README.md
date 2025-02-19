@@ -28,7 +28,7 @@ A secure file-sharing application using **React, Redux, Django, and Google Authe
 
 **Backend:**  
 🛡️ Django REST Framework (DRF)  
-🟢 PostgreSQL / SQLite  
+🟢 SQLite  
 🔑 Google Authenticator (OTP-based authentication)  
 
 ---
